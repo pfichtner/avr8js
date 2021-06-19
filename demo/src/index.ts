@@ -1,11 +1,10 @@
-import '@wokwi/elements';
+import '@wokwi/elements/dist/wokwi-elements.bundle.js';
 import { LEDElement } from '@wokwi/elements';
 import { PinState } from 'avr8js';
 import { buildHex } from './compile';
 import { CPUPerformance } from './cpu-performance';
 import { AVRRunner } from './execute';
 import { formatTime } from './format-time';
-import './index.css';
 import { EditorHistoryUtil } from './utils/editor-history.util';
 
 let editor: any; // eslint-disable-line @typescript-eslint/no-explicit-any

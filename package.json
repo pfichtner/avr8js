@@ -22,9 +22,9 @@
   ],
   "scripts": {
     "build": "rimraf dist && tsc --sourceMap false && tsc -m commonjs --outDir dist/cjs --sourceMap false",
-    "build:demo": "wmr build --public demo/src --out demo/dist",
+    "build:demo": "wmr build --cwd demo --public src --out dist",
     "prepare": "npm run build",
-    "start": "wmr --public demo/src",
+    "start": "wmr start --cwd demo --public src",
     "lint": "eslint src/**/*.ts demo/**/*.ts",
     "test": "npm run lint && jest",
     "test:watch": "jest --watch",
@@ -40,7 +40,7 @@
     "@types/prettier": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
-    "@wokwi/elements": "^0.16.2",
+    "@wokwi/elements": "^0.41.1",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jest": "^23.18.0",
@@ -54,7 +54,7 @@
     "ts-jest": "^26.1.2",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.6",
-    "wmr": "1.0.0"
+    "wmr": "^3.0.1"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -68,9 +68,6 @@
     "npm": ">= 5.0.0"
   },
   "dependencies": {},
-  "alias": {
-    "avr8js": "./src"
-  },
   "browserslist": [
     "last 1 Chrome versions"
   ]
